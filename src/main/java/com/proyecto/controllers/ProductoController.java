@@ -1,6 +1,7 @@
 package com.proyecto.controllers;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
@@ -34,6 +35,11 @@ public class ProductoController {
 	@GetMapping("/")
 	public List<ProductoDTO> readAll(){
 		return repository.findAll();
+	}
+	
+	@GetMapping("/prodcuto/{id}")
+	public Optional<ProductoDTO> readId(@PathVariable String id){
+		return repository.findById(id);
 	}
 	
 	@PutMapping("/producto/{id}")
