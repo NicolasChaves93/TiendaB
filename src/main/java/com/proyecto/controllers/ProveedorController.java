@@ -16,14 +16,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.proyecto.models.ClienteDTO;
 import com.proyecto.models.ProveedorDTO;
-import com.proyecto.repositories.IClienteDAO;
 import com.proyecto.repositories.IProveedorDAO;
 
 @RestController
 @CrossOrigin(origins = "*", methods = {RequestMethod.POST, RequestMethod.GET, RequestMethod.PUT, RequestMethod.DELETE})
-@RequestMapping("/api/proveedor")
+@RequestMapping("/api/proveedores")
 public class ProveedorController {
 	@Autowired
 	private IProveedorDAO repository;
